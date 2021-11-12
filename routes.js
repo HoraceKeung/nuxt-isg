@@ -15,12 +15,15 @@ module.exports = new Router()
 			}
 		})
 	})
-	.get('/:pokemon', ({ cache }) => {
+	.get('/:pokemon', ({ cache, serveStatic, renderWithApp }) => {
 		cache({
 			edge: {
 				maxAgeSeconds: 60 * 60 * 24,
 				staleWhileRevalidateSeconds: 60 * 60
 			}
+		})
+		serveStatic('dist/:pokemon.html', {
+			onNotFound: () => renderWithApp()
 		})
 	})
 	.use(nuxtRoutes)
