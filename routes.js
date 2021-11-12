@@ -8,4 +8,19 @@ module.exports = new Router()
 	.match('/service-worker.js', ({ serviceWorker }) => {
 		serviceWorker('.nuxt/dist/client/service-worker.js')
 	})
+	.get('/', ({ cache }) => {
+		cache({
+			edge: {
+				maxAgeSeconds: 60 * 60 * 24 * 365
+			}
+		})
+	})
+	.get('/:pokemon', ({ cache }) => {
+		cache({
+			edge: {
+				maxAgeSeconds: 60 * 60 * 24,
+				staleWhileRevalidateSeconds: 60 * 60
+			}
+		})
+	})
 	.use(nuxtRoutes)

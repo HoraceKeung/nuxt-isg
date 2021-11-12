@@ -2,14 +2,15 @@ export default {
 	target: 'static',
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: 'nuxt-isg',
+		titleTemplate: '%s | Pokemon finder',
+		title: 'Home',
 		htmlAttrs: {
 			lang: 'en'
 		},
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' },
+			{ hid: 'description', name: 'description', content: 'Pokemon finder - built with Nuxt 2, calling Pokémon API, and deployed to Layer0 with Incremental Static Rendering (ISG)' },
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
 		link: [
@@ -19,6 +20,7 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
+		'~/assets/main.css'
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
