@@ -1,16 +1,27 @@
 {
-	"name": "nuxt-isg",
-	"version": "1.0.0",
-	"private": true,
 	"scripts": {
+		"layer0:dev": "layer0 dev",
+		"layer0:build": "layer0 build",
+		"layer0:deploy": "layer0 deploy",
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate"
 	},
+	"name": "nuxt-isg",
+	"version": "1.0.0",
+	"private": true,
 	"dependencies": {
+		"@nuxt/core": "^2.15.8"
+	},
+	"devDependencies": {
+		"@layer0/cli": "^4.2.0",
+		"@layer0/core": "^4.2.0",
+		"@layer0/devtools": "^4.2.0",
+		"@layer0/nuxt": "^4.2.0",
+		"@layer0/prefetch": "^4.2.0",
+		"@layer0/vue": "^4.2.0",
 		"core-js": "^3.19.1",
 		"nuxt": "^2.15.8"
-	},
-	"devDependencies": {}
+	}
 }

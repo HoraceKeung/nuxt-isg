@@ -1,4 +1,5 @@
 export default {
+	target: 'static',
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
 		title: 'nuxt-isg',
@@ -29,6 +30,12 @@ export default {
 
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
+		[
+			'@layer0/nuxt/module',
+			{
+				layer0SourceMaps: true
+			}
+		]
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
